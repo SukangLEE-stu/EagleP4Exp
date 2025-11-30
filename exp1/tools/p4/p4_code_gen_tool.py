@@ -3,7 +3,7 @@ import json
 
 
 def load_config(fname):
-    Planter_config = json.load(open('src/configs/' + fname, 'r'))
+    Planter_config = json.load(open(fname, 'r'))
     config_file = Planter_config['p4 config']
     config = {}
     config['num_features'] = config_file["number of features"]
@@ -165,10 +165,10 @@ def ten_to_bin(num,count):
     return num
 
 def create_tables_Commend(fname, config):
-    num_features = config['data config']['number of features']
-    num_classes = config['model config']['number of classes']
-    num_trees = config['model config']['number of trees']
-    Ternary_Table = json.load(open('Tables/Ternary_Table.json', 'r'))
+    num_features = config['features']
+    num_classes = 2
+    num_trees = config['trees']
+    Ternary_Table = json.load(open('target/logs/Ternary_Table.json', 'r'))
     with open(fname, 'w') as file:
 
         for f in range(num_features):

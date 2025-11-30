@@ -1,5 +1,6 @@
 import data.data_preprocess as dp
 import tools.table_transfer as tt
+import tools.p4.p4_code_creator as code_gen_tool
 
 # use less data
 isTest = True
@@ -33,3 +34,28 @@ if isPythonTest:
         tt.resource_prediction()
     except Exception as e:
         pass
+
+code_gen_tool.main()
+
+
+if_using_subprocess = False
+test_model_path = Planter_config['directory config']['work']+'/src/targets/'+Planter_config['target config']['device'] +'/'+Planter_config['target config']['type']
+print('= Add the following path: '+test_model_path)
+sys.path.append(test_model_path)
+run_model_main = importlib.util.spec_from_file_location("*", test_model_path+"/run_model.py")
+run_model_functions = importlib.util.module_from_spec(run_model_main)
+run_model_main.loader.exec_module(run_model_functions)
+processes, if_using_subprocess = run_model_functions.main(if_using_subprocess)
+
+test_model_main = importlib.util.spec_from_file_location("*", test_model_path+"/test_model.py")
+test_model_functions = importlib.util.module_from_spec(test_model_main)
+test_model_main.loader.exec_module(test_model_functions)
+processes, if_using_subprocess = test_model_functions.main(sklearn_test_y, test_X, test_y, processes, if_using_subprocess)
+
+if if_using_subprocess:
+    print('Join all subprocess together ...')
+    try:
+        for p in processes:
+            p.join()
+    except Exception as e:
+        print(str(e))

@@ -3,9 +3,9 @@ import os
 import json
 import binascii
 import numpy as np
-from p4_code_gen_tool import *
-from p4_code_constants_data import *
-from p4_code_constants_actions import *
+from tools.p4.p4_code_gen_tool import *
+from tools.p4.p4_code_constants_data import *
+from tools.p4.p4_code_constants_actions import *
 
 def create_headers(fname, config):
     with open(fname, 'a') as headers:
@@ -219,19 +219,18 @@ def create_include(fname, config):
 
 def main():
     # The list of files being manipulated
-    config_file = 'Planter_config.json'
+    config_file = 'target/eagle_config.json'
     # load configuration from file
-    config, Planter_config = load_config(config_file)
+    config, eagle_config = load_config(config_file)
 
     ##################################################
     # print('Generate p4 files')
     file_name = 'v1_eagle'
-    p4_file = 'auto_generated.p4'
+    p4_file = 'target/auto_generated.p4'
     tables_json = 'table.json'
 
     ##################################################
     print('Generating p4 files and load data file...',end=" ")
-    # add_license(p4_file)
 
     add_model_intro(p4_file, config)
 
@@ -249,10 +248,10 @@ def main():
     create_main(p4_file, config)
 
     ##################################################
-    load_data_file = './target/load_table.py'
+    load_data_file = 'target/load_table.py'
     # create load tables script
     # add_license(load_data_file)
-    create_load_tables(load_data_file, tables_json, config, Planter_config, file_name)
+    create_load_tables(load_data_file, tables_json, config, eagle_config, file_name)
     print("Done")
 
 

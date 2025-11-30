@@ -119,7 +119,7 @@ def find_feature_split(model, tree_index, num_features):
     for l in range(num_features):
         feature_split["feature " + str(l)] = [int(np.floor(i)) for i in feature_split["feature " + str(l)]]
         feature_split["feature " + str(l)].sort()
-    tree = open('src/temp/tree' + str(tree_index) + '.txt', "w+")
+    tree = open('target/logs/tree' + str(tree_index) + '.txt', "w+")
     for l in range(num_features):
         tree.write(str(feature_names[l]) + " = ")
         tree.write(str(feature_split["feature " + str(l)]))
@@ -128,7 +128,7 @@ def find_feature_split(model, tree_index, num_features):
     get_lineage(model, feature_names, tree)
     tree.close()
     action = [0, 1]
-    textfile = 'src/temp/tree' + str(tree_index) + '.txt'
+    textfile = 'target/logs/tree' + str(tree_index) + '.txt'
     for f in range(num_features):
         feature_split['feature ' + str(f)] = sorted(list(set(feature_split['feature ' + str(f)])))
     return textfile, feature_split
@@ -343,6 +343,7 @@ def run_model(train_X, train_y, test_X, test_y, used_features):
     print('feature max is', feature_max)
 
     # =================== train model timer ===================
+    eagle_config['timer log'] = {}
     eagle_config['timer log']['train model'] = {}
     eagle_config['timer log']['train model']['start'] = time.time()
     # =================== train model timer ===================
@@ -478,9 +479,9 @@ def run_model(train_X, train_y, test_X, test_y, used_features):
     # =================== convert model timer ===================
 
     table_name = 'Ternary_Table.json'
-    json.dump(Ternary_Table, open('Tables/' + table_name, 'w'), indent=4)
+    json.dump(Ternary_Table, open('target/logs/' + table_name, 'w'), indent=4)
     print('\nTernary_Table is generated')
-    json.dump(Exact_Table, open('Tables/Exact_Table.json', 'w'), indent=4)
+    json.dump(Exact_Table, open('target/logs/Exact_Table.json', 'w'), indent=4)
     print('Exact_Table is generated')
 
     eagle_config['p4 config'] = {}
@@ -507,9 +508,9 @@ def run_model(train_X, train_y, test_X, test_y, used_features):
     eagle_config['test config']['type of test'] = 'classification'
 
     json.dump(eagle_config,
-              open(eagle_config['directory config']['work'] + '/src/configs/eagle_config.json', 'w'), indent=4,
+              open('./target/eagle_config.json', 'w'), indent=4,
               cls=NpEncoder)
-    print(eagle_config['directory config']['work'] + '/src/configs/eagle_config.json is generated')
+    print('target/eagle_config.json is generated')
 
     # main()
     return sklearn_y_predict.tolist()
