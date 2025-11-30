@@ -7,8 +7,8 @@ import math
 import re
 import json
 from sklearn.metrics import *
-from src.functions.Range_to_TCAM_Top_Down import *
-from src.functions.json_encoder import *
+from tools.table_postprocess import *
+from common.json_tool import *
 import copy
 import os
 
@@ -320,21 +320,15 @@ def votes_to_class(tree_num, vote_list, num_trees, num_classes, g_table, num):
 
 
 def run_model(train_X, train_y, test_X, test_y, used_features):
-    config_file = 'src/configs/Planter_config.json'
+    config_file = 'config.json'
 
-    Planter_config = json.load(open(config_file, 'r'))
+    eagle_config = json.load(open(config_file, 'r'))
 
-    Planter_config['model config']['number of trees'] = int(input('- Number of trees? (default = 5) ') or '5')
-    Planter_config['model config']['number of depth'] = int(input('- Number of depth? (default = 4) ') or '4')
-    Planter_config['model config']['max number of leaf nodes'] = int(
-        input('- Number of leaf nodes? (default = 1000) ') or '1000')
-    Planter_config['model config']['number of classes'] = int(np.max(train_y) + 1)
-
-    num_features = Planter_config['data config']['number of features']
-    num_classes = Planter_config['model config']['number of classes']
-    num_depth = Planter_config['model config']['number of depth']
-    num_trees = Planter_config['model config']['number of trees']
-    max_leaf_nodes = Planter_config['model config']['max number of leaf nodes']
+    num_features = eagle_config['features']
+    num_classes = 2
+    num_depth = eagle_config['depth']
+    num_trees = eagle_config['trees']
+    max_leaf_nodes = eagle_config['max_leaf']
 
     feature_names = []
     for i, f in enumerate(used_features):
@@ -349,8 +343,8 @@ def run_model(train_X, train_y, test_X, test_y, used_features):
     print('feature max is', feature_max)
 
     # =================== train model timer ===================
-    Planter_config['timer log']['train model'] = {}
-    Planter_config['timer log']['train model']['start'] = time.time()
+    eagle_config['timer log']['train model'] = {}
+    eagle_config['timer log']['train model']['start'] = time.time()
     # =================== train model timer ===================
 
     # Random Forest
@@ -364,16 +358,16 @@ def run_model(train_X, train_y, test_X, test_y, used_features):
     print('\n', result)
 
     # =================== train model timer ===================
-    Planter_config['timer log']['train model']['end'] = time.time()
+    eagle_config['timer log']['train model']['end'] = time.time()
     # =================== train model timer ===================
 
     # =================== convert model timer ===================
-    Planter_config['timer log']['convert model'] = {}
-    Planter_config['timer log']['convert model']['start'] = time.time()
+    eagle_config['timer log']['convert model'] = {}
+    eagle_config['timer log']['convert model']['start'] = time.time()
     # =================== convert model timer ===================
 
     # exit()
-    log_file = 'src/logs/log.json'
+    log_file = 'target/logs/log.json'
     if os.path.exists(log_file):
         log_dict = json.load(open(log_file, 'r'))
     else:
@@ -480,7 +474,7 @@ def run_model(train_X, train_y, test_X, test_y, used_features):
     Exact_Table['decision'] = copy.deepcopy(Ternary_Table['decision'])
 
     # =================== convert model timer ===================
-    Planter_config['timer log']['convert model']['end'] = time.time()
+    eagle_config['timer log']['convert model']['end'] = time.time()
     # =================== convert model timer ===================
 
     table_name = 'Ternary_Table.json'
@@ -489,46 +483,46 @@ def run_model(train_X, train_y, test_X, test_y, used_features):
     json.dump(Exact_Table, open('Tables/Exact_Table.json', 'w'), indent=4)
     print('Exact_Table is generated')
 
-    Planter_config['p4 config'] = {}
-    Planter_config['p4 config']["model"] = "RF"
-    Planter_config['p4 config']["number of features"] = num_features
-    Planter_config['p4 config']["number of classes"] = num_classes
-    Planter_config['p4 config']["number of trees"] = num_trees
-    Planter_config['p4 config']['table name'] = 'Ternary_Table.json'
-    Planter_config['p4 config']["decision table size"] = len(Ternary_Table['decision'].keys())
-    Planter_config['p4 config']["code table size"] = []
+    eagle_config['p4 config'] = {}
+    eagle_config['p4 config']["model"] = "RF"
+    eagle_config['p4 config']["number of features"] = num_features
+    eagle_config['p4 config']["number of classes"] = num_classes
+    eagle_config['p4 config']["number of trees"] = num_trees
+    eagle_config['p4 config']['table name'] = 'Ternary_Table.json'
+    eagle_config['p4 config']["decision table size"] = len(Ternary_Table['decision'].keys())
+    eagle_config['p4 config']["code table size"] = []
     for tree in range(num_trees):
-        Planter_config['p4 config']["code table size"] += [len(Ternary_Table['tree ' + str(tree)].keys())]
-    Planter_config['p4 config']["default vote"] = default_vote
-    Planter_config['p4 config']["default label"] = default_class
-    Planter_config['p4 config']["width of feature"] = feature_width
-    Planter_config['p4 config']["width of code"] = code_width_tree_feature
-    Planter_config['p4 config']["used columns"] = []
+        eagle_config['p4 config']["code table size"] += [len(Ternary_Table['tree ' + str(tree)].keys())]
+    eagle_config['p4 config']["default vote"] = default_vote
+    eagle_config['p4 config']["default label"] = default_class
+    eagle_config['p4 config']["width of feature"] = feature_width
+    eagle_config['p4 config']["width of code"] = code_width_tree_feature
+    eagle_config['p4 config']["used columns"] = []
     for i in range(num_features):
-        Planter_config['p4 config']["used columns"] += [len(Ternary_Table['feature ' + str(i)].keys())]
-    Planter_config['p4 config']["width of probability"] = 7
-    Planter_config['p4 config']["width of result"] = 8
-    Planter_config['p4 config']["standard headers"] = ["ethernet", "Planter", "arp", "ipv4", "tcp", "udp", "vlan_tag"]
-    Planter_config['test config'] = {}
-    Planter_config['test config']['type of test'] = 'classification'
+        eagle_config['p4 config']["used columns"] += [len(Ternary_Table['feature ' + str(i)].keys())]
+    eagle_config['p4 config']["width of probability"] = 7
+    eagle_config['p4 config']["width of result"] = 8
+    eagle_config['p4 config']["standard headers"] = ["ethernet", "Planter", "arp", "ipv4", "tcp", "udp", "vlan_tag"]
+    eagle_config['test config'] = {}
+    eagle_config['test config']['type of test'] = 'classification'
 
-    json.dump(Planter_config,
-              open(Planter_config['directory config']['work'] + '/src/configs/Planter_config.json', 'w'), indent=4,
+    json.dump(eagle_config,
+              open(eagle_config['directory config']['work'] + '/src/configs/eagle_config.json', 'w'), indent=4,
               cls=NpEncoder)
-    print(Planter_config['directory config']['work'] + '/src/configs/Planter_config.json is generated')
+    print(eagle_config['directory config']['work'] + '/src/configs/eagle_config.json is generated')
 
     # main()
     return sklearn_y_predict.tolist()
 
 
 def test_tables(sklearn_test_y, test_X, test_y):
-    config_file = 'src/configs/Planter_config.json'
-    Planter_config = json.load(open(config_file, 'r'))
-    num_features = Planter_config['data config']['number of features']
-    num_classes = Planter_config['model config']['number of classes']
-    num_trees = Planter_config['model config']['number of trees']
-    num_depth = Planter_config['model config']['number of depth']
-    max_leaf_nodes = Planter_config['model config']['max number of leaf nodes']
+    config_file = 'src/configs/eagle_config.json'
+    eagle_config = json.load(open(config_file, 'r'))
+    num_features = eagle_config['data config']['number of features']
+    num_classes = eagle_config['model config']['number of classes']
+    num_trees = eagle_config['model config']['number of trees']
+    num_depth = eagle_config['model config']['number of depth']
+    max_leaf_nodes = eagle_config['model config']['max number of leaf nodes']
     Ternary_Table = json.load(open('Tables/Ternary_Table.json', 'r'))
     Exact_Table = json.load(open('Tables/Exact_Table.json', 'r'))
 
@@ -580,7 +574,7 @@ def test_tables(sklearn_test_y, test_X, test_y):
                     match_or_not = True
                     break
             if not match_or_not:
-                vote_list[tree] = Planter_config['p4 config']["default vote"]
+                vote_list[tree] = eagle_config['p4 config']["default vote"]
 
         for key in Exact_Table['decision']:
             match_or_not = False
@@ -595,7 +589,7 @@ def test_tables(sklearn_test_y, test_X, test_y):
                 break
         if not match_or_not:
             # print('decision(vote to class) table not matched', vote_list)
-            switch_prediction = Planter_config['p4 config']["default label"]
+            switch_prediction = eagle_config['p4 config']["default label"]
         # print(test_y)
 
         switch_test_y += [switch_prediction]
@@ -620,12 +614,12 @@ def test_tables(sklearn_test_y, test_X, test_y):
 
 
 def resource_prediction():
-    config_file = './src/configs/Planter_config.json'
-    Planter_config = json.load(open(config_file, 'r'))
+    config_file = './src/configs/eagle_config.json'
+    eagle_config = json.load(open(config_file, 'r'))
 
     print('Exact match entries: ',
-          np.sum(Planter_config['p4 config']["code table size"]) + Planter_config['p4 config']["decision table size"])
-    print('Ternary match entries: ', np.sum(Planter_config['p4 config']["used columns"]))
+          np.sum(eagle_config['p4 config']["code table size"]) + eagle_config['p4 config']["decision table size"])
+    print('Ternary match entries: ', np.sum(eagle_config['p4 config']["used columns"]))
 
 
 if __name__ == '__main__':

@@ -206,14 +206,10 @@ def create_tables_Commend(fname, config):
 
 
 def create_load_tables(fname, fjson, config, Planter_config, file_name):
-    work_root = Planter_config['directory config']['work']
+    work_root = './'
 
-    commend_file = work_root + "/src/targets/bmv2/software/model_test/test_environment/s1-commands.txt"
+    commend_file = work_root + "target/s1-commands.txt"
     create_tables_Commend(commend_file, Planter_config)
-
-    commend_file = work_root + "/Tables/s1-commands.txt"
-    create_tables_Commend(commend_file, Planter_config)
-
 
     config['debug_load_table'] = False
 
@@ -225,7 +221,7 @@ def create_load_tables(fname, fjson, config, Planter_config, file_name):
                     ((not config['debug_load_table']) * ("sys.path.append('" + work_root + "')\n" \
                     "os.chdir('" + work_root + "')\n")) + \
                     "print('working dir: ' + os.getcwd())\n" \
-                    "table = json.load(open('./Tables/" + fjson + "','r'))\n" \
+                    "table = json.load(open('./target/" + fjson + "','r'))\n" \
                     "Planter_config = json.load(open('./src/configs/Planter_config.json','r'))\n"\
                     "config = Planter_config['p4 config']\n\n")
         tload.write((config['debug_load_table']) * ('# ') + "Ingress = bfrt."+file_name+".pipe.SwitchIngress\n")

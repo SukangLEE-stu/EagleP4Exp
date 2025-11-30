@@ -1,0 +1,6 @@
+{
+  "features": 5,
+  "trees": 5,
+  "depth": 4,
+  "max_leaf": 1000
+}
