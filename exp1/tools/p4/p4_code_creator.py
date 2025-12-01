@@ -5,7 +5,7 @@ import binascii
 import numpy as np
 from tools.p4.p4_code_gen_tool import *
 from tools.p4.p4_code_constants_data import *
-from tools.p4.p4_code_constants_actions import *
+# from tools.p4.p4_code_constants_actions import *
 
 def create_headers(fname, config):
     with open(fname, 'a') as headers:
