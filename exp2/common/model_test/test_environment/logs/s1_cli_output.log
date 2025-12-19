@@ -1,0 +1,29 @@
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: Adding entry to exact match table MyIngress.arp_table
+match key:           EXACT-0a:00:01:02
+action:              send_arp_reply
+runtime data:        08:00:00:00:01:02
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table MyIngress.arp_table
+match key:           EXACT-0a:00:01:01
+action:              send_arp_reply
+runtime data:        08:00:00:00:01:01
+Entry has been added with handle 1
+RuntimeCmd: Adding entry to exact match table MyIngress.arp_table
+match key:           EXACT-0a:00:01:01
+action:              send_arp_reply
+runtime data:        08:00:00:00:01:01
+Invalid table operation (DUPLICATE_ENTRY)
+RuntimeCmd: Adding entry to exact match table MyIngress.mac_port_table
+match key:           EXACT-08:00:00:00:01:02
+action:              set_port_forward
+runtime data:        00:02
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table MyIngress.mac_port_table
+match key:           EXACT-08:00:00:00:01:01
+action:              set_port_forward
+runtime data:        00:01
+Entry has been added with handle 1
+RuntimeCmd: 

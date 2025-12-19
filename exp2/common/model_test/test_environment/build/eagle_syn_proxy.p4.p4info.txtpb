@@ -1,0 +1,311 @@
+# proto-file: p4/config/v1/p4info.proto
+# proto-message: p4.config.v1.P4Info
+
+pkg_info {
+  arch: "v1model"
+}
+tables {
+  preamble {
+    id: 46061808
+    name: "MyIngress.debugger"
+    alias: "debugger"
+  }
+  match_fields {
+    id: 1
+    name: "meta.reg_index"
+    bitwidth: 16
+    match_type: EXACT
+  }
+  match_fields {
+    id: 2
+    name: "hdr.tcp.dstPort"
+    bitwidth: 16
+    match_type: EXACT
+  }
+  match_fields {
+    id: 3
+    name: "hdr.ipv4.dstAddr"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  match_fields {
+    id: 4
+    name: "hdr.tcp.seqNo"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  match_fields {
+    id: 5
+    name: "hdr.tcp.srcPort"
+    bitwidth: 16
+    match_type: EXACT
+  }
+  match_fields {
+    id: 6
+    name: "hdr.ipv4.srcAddr"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  match_fields {
+    id: 7
+    name: "hdr.tcp.ctrl"
+    bitwidth: 6
+    match_type: EXACT
+  }
+  action_refs {
+    id: 23375780
+  }
+  initial_default_action {
+    action_id: 23375780
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 38908293
+    name: "MyIngress.arp_table"
+    alias: "arp_table"
+  }
+  match_fields {
+    id: 1
+    name: "hdr.arp.target_proto_addr"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  action_refs {
+    id: 23911168
+  }
+  action_refs {
+    id: 25652968
+  }
+  initial_default_action {
+    action_id: 25652968
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 43113958
+    name: "MyIngress.mac_port_table"
+    alias: "mac_port_table"
+  }
+  match_fields {
+    id: 1
+    name: "hdr.ethernet.dstAddr"
+    bitwidth: 48
+    match_type: EXACT
+  }
+  action_refs {
+    id: 30593592
+  }
+  action_refs {
+    id: 25652968
+  }
+  initial_default_action {
+    action_id: 25652968
+  }
+  size: 1024
+}
+actions {
+  preamble {
+    id: 25647441
+    name: "MyIngress.handle_client_syn"
+    alias: "handle_client_syn"
+  }
+}
+actions {
+  preamble {
+    id: 23375780
+    name: "MyIngress.none"
+    alias: "none"
+  }
+}
+actions {
+  preamble {
+    id: 30349738
+    name: "MyIngress.verify_client_ack"
+    alias: "verify_client_ack"
+  }
+}
+actions {
+  preamble {
+    id: 25347103
+    name: "MyIngress.handle_server_syn_ack"
+    alias: "handle_server_syn_ack"
+  }
+}
+actions {
+  preamble {
+    id: 28323272
+    name: "MyIngress.forward_packet_with_seq_offset"
+    alias: "forward_packet_with_seq_offset"
+  }
+}
+actions {
+  preamble {
+    id: 23911168
+    name: "MyIngress.send_arp_reply"
+    alias: "send_arp_reply"
+  }
+  params {
+    id: 1
+    name: "target_mac"
+    bitwidth: 48
+  }
+}
+actions {
+  preamble {
+    id: 25652968
+    name: "MyIngress.drop"
+    alias: "drop"
+  }
+}
+actions {
+  preamble {
+    id: 30593592
+    name: "MyIngress.set_port_forward"
+    alias: "set_port_forward"
+  }
+  params {
+    id: 1
+    name: "port"
+    bitwidth: 9
+  }
+}
+registers {
+  preamble {
+    id: 377970902
+    name: "client_ip_reg"
+    alias: "client_ip_reg"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 65536
+}
+registers {
+  preamble {
+    id: 377415267
+    name: "client_port_reg"
+    alias: "client_port_reg"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 16
+      }
+    }
+  }
+  size: 65536
+}
+registers {
+  preamble {
+    id: 381413262
+    name: "server_ip_reg"
+    alias: "server_ip_reg"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 65536
+}
+registers {
+  preamble {
+    id: 370928130
+    name: "server_port_reg"
+    alias: "server_port_reg"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 16
+      }
+    }
+  }
+  size: 65536
+}
+registers {
+  preamble {
+    id: 371657565
+    name: "client_isn_reg"
+    alias: "client_isn_reg"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 65536
+}
+registers {
+  preamble {
+    id: 372431299
+    name: "proxy_isn_reg"
+    alias: "proxy_isn_reg"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 65536
+}
+registers {
+  preamble {
+    id: 375847869
+    name: "seq_offset_reg"
+    alias: "seq_offset_reg"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 65536
+}
+registers {
+  preamble {
+    id: 369358306
+    name: "ack_offset_reg"
+    alias: "ack_offset_reg"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 65536
+}
+registers {
+  preamble {
+    id: 369972836
+    name: "conn_state_reg"
+    alias: "conn_state_reg"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 8
+      }
+    }
+  }
+  size: 65536
+}
+type_info {
+}

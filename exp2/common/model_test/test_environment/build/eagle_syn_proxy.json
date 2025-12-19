@@ -1,0 +1,6034 @@
+{
+  "header_types" : [
+    {
+      "name" : "scalars_0",
+      "id" : 0,
+      "fields" : [
+        ["tmp", 32, false],
+        ["tmp_0", 32, false],
+        ["tmp_1", 16, false],
+        ["tmp_2", 16, false],
+        ["tmp_3", 8, false],
+        ["tmp_4", 32, false],
+        ["tmp_5", 32, false],
+        ["tmp_6", 32, false],
+        ["tmp_7", 32, false],
+        ["tmp_8", 32, false],
+        ["tmp_9", 32, false],
+        ["tmp_10", 32, false],
+        ["tmp_11", 32, false],
+        ["tmp_12", 16, false],
+        ["tmp_13", 16, false],
+        ["tmp_14", 8, false],
+        ["tmp_15", 32, false],
+        ["tmp_16", 32, false],
+        ["tmp_17", 32, false],
+        ["tmp_18", 32, false],
+        ["tmp_19", 32, false],
+        ["tmp_20", 32, false],
+        ["tmp_21", 16, false],
+        ["tmp_22", 16, false],
+        ["tmp_23", 8, false],
+        ["tmp_24", 32, false],
+        ["tmp_25", 32, false],
+        ["tmp_26", 32, false],
+        ["tmp_27", 32, false],
+        ["tmp_28", 32, false],
+        ["tmp_29", 32, false],
+        ["tmp_30", 32, false],
+        ["tmp_31", 32, false],
+        ["tmp_32", 32, false],
+        ["tmp_33", 32, false],
+        ["tmp_34", 16, false],
+        ["tmp_35", 16, false],
+        ["tmp_36", 8, false],
+        ["tmp_37", 32, false],
+        ["tmp_38", 32, false],
+        ["tmp_39", 32, false],
+        ["tmp_40", 32, false],
+        ["tmp_41", 32, false],
+        ["tmp_42", 32, false],
+        ["tmp_43", 32, false],
+        ["tmp_44", 32, false],
+        ["tmp_45", 32, false],
+        ["tmp_46", 32, false],
+        ["tmp_47", 32, false],
+        ["tmp_48", 16, false],
+        ["tmp_49", 16, false],
+        ["tmp_50", 8, false],
+        ["tmp_51", 32, false],
+        ["tmp_52", 32, false],
+        ["tmp_53", 16, false],
+        ["tmp_54", 16, false],
+        ["tmp_55", 8, false],
+        ["tmp_56", 32, false],
+        ["tmp_57", 32, false],
+        ["tmp_58", 32, false],
+        ["tmp_59", 32, false],
+        ["tmp_60", 32, false],
+        ["tmp_61", 32, false],
+        ["tmp_62", 16, false],
+        ["tmp_63", 16, false],
+        ["tmp_64", 8, false],
+        ["tmp_65", 32, false],
+        ["tmp_66", 32, false],
+        ["tmp_67", 16, false],
+        ["tmp_68", 16, false],
+        ["tmp_69", 8, false],
+        ["tmp_70", 32, false],
+        ["tmp_71", 32, false],
+        ["tmp_72", 32, false],
+        ["tmp_73", 32, false],
+        ["current_state_0", 8, false],
+        ["server_ip_0", 32, false],
+        ["server_port_0", 16, false],
+        ["srcMac_0", 48, false],
+        ["current_state_1", 8, false],
+        ["stored_proxy_isn_0", 32, false],
+        ["client_ip_0", 32, false],
+        ["client_port_0", 16, false],
+        ["server_ip_1", 32, false],
+        ["server_port_1", 16, false],
+        ["client_isn_0", 32, false],
+        ["current_state_2", 8, false],
+        ["proxy_isn_0", 32, false],
+        ["client_ip_1", 32, false],
+        ["client_port_1", 16, false],
+        ["server_ip_2", 32, false],
+        ["server_port_2", 16, false],
+        ["srcMac_1", 48, false],
+        ["tmp_ack_0", 32, false],
+        ["rev_state_0", 8, false],
+        ["current_state_3", 8, false],
+        ["ack_offset_0", 32, false],
+        ["target_ip_0", 32, false],
+        ["metadata.reg_index", 16, false],
+        ["metadata.reg_rev_index", 16, false],
+        ["metadata.proxy_isn", 32, false],
+        ["metadata.direction", 1, false],
+        ["metadata.seq_offset", 32, false],
+        ["metadata.ack_offset", 32, false],
+        ["metadata.tcpSegLen", 16, false],
+        ["_padding_0", 7, false]
+      ]
+    },
+    {
+      "name" : "standard_metadata",
+      "id" : 1,
+      "fields" : [
+        ["ingress_port", 9, false],
+        ["egress_spec", 9, false],
+        ["egress_port", 9, false],
+        ["instance_type", 32, false],
+        ["packet_length", 32, false],
+        ["enq_timestamp", 32, false],
+        ["enq_qdepth", 19, false],
+        ["deq_timedelta", 32, false],
+        ["deq_qdepth", 19, false],
+        ["ingress_global_timestamp", 48, false],
+        ["egress_global_timestamp", 48, false],
+        ["mcast_grp", 16, false],
+        ["egress_rid", 16, false],
+        ["checksum_error", 1, false],
+        ["parser_error", 32, false],
+        ["priority", 3, false],
+        ["_padding", 3, false]
+      ]
+    },
+    {
+      "name" : "ethernet_t",
+      "id" : 2,
+      "fields" : [
+        ["dstAddr", 48, false],
+        ["srcAddr", 48, false],
+        ["etherType", 16, false]
+      ]
+    },
+    {
+      "name" : "arp_t",
+      "id" : 3,
+      "fields" : [
+        ["hw_type", 16, false],
+        ["proto_type", 16, false],
+        ["hw_addr_len", 8, false],
+        ["proto_addr_len", 8, false],
+        ["opcode", 16, false],
+        ["sender_hw_addr", 48, false],
+        ["sender_proto_addr", 32, false],
+        ["target_hw_addr", 48, false],
+        ["target_proto_addr", 32, false]
+      ]
+    },
+    {
+      "name" : "ipv4_t",
+      "id" : 4,
+      "fields" : [
+        ["version", 4, false],
+        ["ihl", 4, false],
+        ["diffserv", 8, false],
+        ["totalLen", 16, false],
+        ["identification", 16, false],
+        ["flags", 3, false],
+        ["fragOffset", 13, false],
+        ["ttl", 8, false],
+        ["protocol", 8, false],
+        ["hdrChecksum", 16, false],
+        ["srcAddr", 32, false],
+        ["dstAddr", 32, false]
+      ]
+    },
+    {
+      "name" : "tcp_t",
+      "id" : 5,
+      "fields" : [
+        ["srcPort", 16, false],
+        ["dstPort", 16, false],
+        ["seqNo", 32, false],
+        ["ackNo", 32, false],
+        ["dataOffset", 4, false],
+        ["res", 3, false],
+        ["ecn", 3, false],
+        ["ctrl", 6, false],
+        ["window", 16, false],
+        ["checksum", 16, false],
+        ["urgentPtr", 16, false]
+      ]
+    }
+  ],
+  "headers" : [
+    {
+      "name" : "scalars",
+      "id" : 0,
+      "header_type" : "scalars_0",
+      "metadata" : true,
+      "pi_omit" : true
+    },
+    {
+      "name" : "standard_metadata",
+      "id" : 1,
+      "header_type" : "standard_metadata",
+      "metadata" : true,
+      "pi_omit" : true
+    },
+    {
+      "name" : "ethernet",
+      "id" : 2,
+      "header_type" : "ethernet_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "arp",
+      "id" : 3,
+      "header_type" : "arp_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "ipv4",
+      "id" : 4,
+      "header_type" : "ipv4_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "tcp",
+      "id" : 5,
+      "header_type" : "tcp_t",
+      "metadata" : false,
+      "pi_omit" : true
+    }
+  ],
+  "header_stacks" : [],
+  "header_union_types" : [],
+  "header_unions" : [],
+  "header_union_stacks" : [],
+  "field_lists" : [],
+  "errors" : [
+    ["NoError", 0],
+    ["PacketTooShort", 1],
+    ["NoMatch", 2],
+    ["StackOutOfBounds", 3],
+    ["HeaderTooShort", 4],
+    ["ParserTimeout", 5],
+    ["ParserInvalidArgument", 6]
+  ],
+  "enums" : [],
+  "parsers" : [
+    {
+      "name" : "parser",
+      "id" : 0,
+      "init_state" : "start",
+      "parse_states" : [
+        {
+          "name" : "start",
+          "id" : 0,
+          "parser_ops" : [
+            {
+              "parameters" : [
+                {
+                  "type" : "regular",
+                  "value" : "ethernet"
+                }
+              ],
+              "op" : "extract"
+            }
+          ],
+          "transitions" : [
+            {
+              "type" : "hexstr",
+              "value" : "0x0800",
+              "mask" : null,
+              "next_state" : "parse_ipv4"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x0806",
+              "mask" : null,
+              "next_state" : "parse_arp"
+            },
+            {
+              "type" : "default",
+              "value" : null,
+              "mask" : null,
+              "next_state" : null
+            }
+          ],
+          "transition_key" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "etherType"]
+            }
+          ]
+        },
+        {
+          "name" : "parse_arp",
+          "id" : 1,
+          "parser_ops" : [
+            {
+              "parameters" : [
+                {
+                  "type" : "regular",
+                  "value" : "arp"
+                }
+              ],
+              "op" : "extract"
+            }
+          ],
+          "transitions" : [
+            {
+              "type" : "default",
+              "value" : null,
+              "mask" : null,
+              "next_state" : null
+            }
+          ],
+          "transition_key" : []
+        },
+        {
+          "name" : "parse_ipv4",
+          "id" : 2,
+          "parser_ops" : [
+            {
+              "parameters" : [
+                {
+                  "type" : "regular",
+                  "value" : "ipv4"
+                }
+              ],
+              "op" : "extract"
+            }
+          ],
+          "transitions" : [
+            {
+              "type" : "hexstr",
+              "value" : "0x06",
+              "mask" : null,
+              "next_state" : "parse_tcp"
+            },
+            {
+              "type" : "default",
+              "value" : null,
+              "mask" : null,
+              "next_state" : null
+            }
+          ],
+          "transition_key" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "protocol"]
+            }
+          ]
+        },
+        {
+          "name" : "parse_tcp",
+          "id" : 3,
+          "parser_ops" : [
+            {
+              "parameters" : [
+                {
+                  "type" : "regular",
+                  "value" : "tcp"
+                }
+              ],
+              "op" : "extract"
+            }
+          ],
+          "transitions" : [
+            {
+              "type" : "default",
+              "value" : null,
+              "mask" : null,
+              "next_state" : null
+            }
+          ],
+          "transition_key" : []
+        }
+      ]
+    }
+  ],
+  "parse_vsets" : [],
+  "deparsers" : [
+    {
+      "name" : "deparser",
+      "id" : 0,
+      "source_info" : {
+        "filename" : "eagle_syn_proxy.p4",
+        "line" : 514,
+        "column" : 8,
+        "source_fragment" : "MyDeparser"
+      },
+      "order" : ["ethernet", "arp", "ipv4", "tcp"],
+      "primitives" : []
+    }
+  ],
+  "meter_arrays" : [],
+  "counter_arrays" : [],
+  "register_arrays" : [
+    {
+      "name" : "client_ip_reg",
+      "id" : 0,
+      "source_info" : {
+        "filename" : "eagle_syn_proxy.p4",
+        "line" : 84,
+        "column" : 34,
+        "source_fragment" : "client_ip_reg"
+      },
+      "size" : 65536,
+      "bitwidth" : 32
+    },
+    {
+      "name" : "client_port_reg",
+      "id" : 1,
+      "source_info" : {
+        "filename" : "eagle_syn_proxy.p4",
+        "line" : 85,
+        "column" : 34,
+        "source_fragment" : "client_port_reg"
+      },
+      "size" : 65536,
+      "bitwidth" : 16
+    },
+    {
+      "name" : "server_ip_reg",
+      "id" : 2,
+      "source_info" : {
+        "filename" : "eagle_syn_proxy.p4",
+        "line" : 86,
+        "column" : 34,
+        "source_fragment" : "server_ip_reg"
+      },
+      "size" : 65536,
+      "bitwidth" : 32
+    },
+    {
+      "name" : "server_port_reg",
+      "id" : 3,
+      "source_info" : {
+        "filename" : "eagle_syn_proxy.p4",
+        "line" : 87,
+        "column" : 34,
+        "source_fragment" : "server_port_reg"
+      },
+      "size" : 65536,
+      "bitwidth" : 16
+    },
+    {
+      "name" : "client_isn_reg",
+      "id" : 4,
+      "source_info" : {
+        "filename" : "eagle_syn_proxy.p4",
+        "line" : 88,
+        "column" : 34,
+        "source_fragment" : "client_isn_reg"
+      },
+      "size" : 65536,
+      "bitwidth" : 32
+    },
+    {
+      "name" : "proxy_isn_reg",
+      "id" : 5,
+      "source_info" : {
+        "filename" : "eagle_syn_proxy.p4",
+        "line" : 89,
+        "column" : 34,
+        "source_fragment" : "proxy_isn_reg"
+      },
+      "size" : 65536,
+      "bitwidth" : 32
+    },
+    {
+      "name" : "seq_offset_reg",
+      "id" : 6,
+      "source_info" : {
+        "filename" : "eagle_syn_proxy.p4",
+        "line" : 90,
+        "column" : 34,
+        "source_fragment" : "seq_offset_reg"
+      },
+      "size" : 65536,
+      "bitwidth" : 32
+    },
+    {
+      "name" : "ack_offset_reg",
+      "id" : 7,
+      "source_info" : {
+        "filename" : "eagle_syn_proxy.p4",
+        "line" : 91,
+        "column" : 34,
+        "source_fragment" : "ack_offset_reg"
+      },
+      "size" : 65536,
+      "bitwidth" : 32
+    },
+    {
+      "name" : "conn_state_reg",
+      "id" : 8,
+      "source_info" : {
+        "filename" : "eagle_syn_proxy.p4",
+        "line" : 92,
+        "column" : 33,
+        "source_fragment" : "conn_state_reg"
+      },
+      "size" : 65536,
+      "bitwidth" : 8
+    }
+  ],
+  "calculations" : [
+    {
+      "name" : "calc",
+      "id" : 0,
+      "algo" : "crc32",
+      "input" : [
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_0"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_1"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_2"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_3"]
+        }
+      ]
+    },
+    {
+      "name" : "calc_0",
+      "id" : 1,
+      "algo" : "crc32",
+      "input" : [
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_10"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_11"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_12"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_13"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_14"]
+        }
+      ]
+    },
+    {
+      "name" : "calc_1",
+      "id" : 2,
+      "algo" : "crc32",
+      "input" : [
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_19"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_20"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_21"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_22"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_23"]
+        }
+      ]
+    },
+    {
+      "name" : "calc_2",
+      "id" : 3,
+      "algo" : "crc32",
+      "input" : [
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_32"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_33"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_34"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_35"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_36"]
+        }
+      ]
+    },
+    {
+      "name" : "calc_3",
+      "id" : 4,
+      "algo" : "crc32",
+      "input" : [
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_46"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_47"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_48"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_49"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_50"]
+        }
+      ]
+    },
+    {
+      "name" : "calc_4",
+      "id" : 5,
+      "algo" : "crc32",
+      "input" : [
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_51"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_52"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_53"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_54"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_55"]
+        }
+      ]
+    },
+    {
+      "name" : "calc_5",
+      "id" : 6,
+      "algo" : "crc32",
+      "input" : [
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_60"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_61"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_62"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_63"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_64"]
+        }
+      ]
+    },
+    {
+      "name" : "calc_6",
+      "id" : 7,
+      "algo" : "crc32",
+      "input" : [
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_65"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_66"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_67"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_68"]
+        },
+        {
+          "type" : "field",
+          "value" : ["scalars", "tmp_69"]
+        }
+      ]
+    },
+    {
+      "name" : "calc_7",
+      "id" : 8,
+      "source_info" : {
+        "filename" : "eagle_syn_proxy.p4",
+        "line" : 483,
+        "column" : 8,
+        "source_fragment" : "update_checksum( ..."
+      },
+      "algo" : "csum16",
+      "input" : [
+        {
+          "type" : "field",
+          "value" : ["ipv4", "version"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "ihl"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "diffserv"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "totalLen"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "identification"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "flags"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "fragOffset"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "ttl"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "protocol"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "srcAddr"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "dstAddr"]
+        }
+      ]
+    }
+  ],
+  "learn_lists" : [],
+  "actions" : [
+    {
+      "name" : "MyIngress.handle_client_syn",
+      "id" : 0,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "srcAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 148,
+            "column" : 63,
+            "source_fragment" : "hdr.ipv4.srcAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_0"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "dstAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 149,
+            "column" : 59,
+            "source_fragment" : "hdr.ipv4.dstAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_1"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "srcPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 150,
+            "column" : 59,
+            "source_fragment" : "hdr.tcp.srcPort"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_2"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "dstPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 151,
+            "column" : 59,
+            "source_fragment" : "hdr.tcp.dstPort"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_3"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "protocol"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 152,
+            "column" : 59,
+            "source_fragment" : "hdr.ipv4.protocol"
+          }
+        },
+        {
+          "op" : "modify_field_with_hash_based_offset",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata.reg_index"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000000"
+            },
+            {
+              "type" : "calculation",
+              "value" : "calc"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00010000"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 148,
+            "column" : 8,
+            "source_fragment" : "hash(meta.reg_index, HashAlgorithm.crc32, (bit<32>)0, {hdr.ipv4.srcAddr, ..."
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_4"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 175,
+            "column" : 43,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "current_state_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "conn_state_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_4"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 175,
+            "column" : 8,
+            "source_fragment" : "conn_state_reg.read(current_state, (bit<32>)meta.reg_index)"
+          }
+        },
+        {
+          "op" : "_jump_if_zero",
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 177,
+            "column" : 8,
+            "source_fragment" : "if"
+          },
+          "parameters" : [
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "b2d",
+                  "left" : null,
+                  "right" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "==",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "current_state_0"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x2d"
+            }
+          ]
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_5"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 179,
+            "column" : 32,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "client_ip_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_5"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "srcAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 179,
+            "column" : 12,
+            "source_fragment" : "client_ip_reg.write((bit<32>)meta.reg_index, hdr.ipv4.srcAddr)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_6"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 180,
+            "column" : 34,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "client_port_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_6"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "srcPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 180,
+            "column" : 12,
+            "source_fragment" : "client_port_reg.write((bit<32>)meta.reg_index, hdr.tcp.srcPort)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_7"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 181,
+            "column" : 32,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "server_ip_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_7"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "dstAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 181,
+            "column" : 12,
+            "source_fragment" : "server_ip_reg.write((bit<32>)meta.reg_index, hdr.ipv4.dstAddr)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_8"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 182,
+            "column" : 34,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "server_port_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_8"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "dstPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 182,
+            "column" : 12,
+            "source_fragment" : "server_port_reg.write((bit<32>)meta.reg_index, hdr.tcp.dstPort)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_9"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 183,
+            "column" : 33,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "client_isn_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_9"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "seqNo"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 183,
+            "column" : 12,
+            "source_fragment" : "client_isn_reg.write((bit<32>)meta.reg_index, hdr.tcp.seqNo)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_10"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "srcAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 188,
+            "column" : 67,
+            "source_fragment" : "hdr.ipv4.srcAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_11"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "dstAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 189,
+            "column" : 59,
+            "source_fragment" : "hdr.ipv4.dstAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_12"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "srcPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 190,
+            "column" : 59,
+            "source_fragment" : "hdr.tcp.srcPort"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_13"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "dstPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 191,
+            "column" : 59,
+            "source_fragment" : "hdr.tcp.dstPort"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_14"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "protocol"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 192,
+            "column" : 59,
+            "source_fragment" : "hdr.ipv4.protocol"
+          }
+        },
+        {
+          "op" : "modify_field_with_hash_based_offset",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata.proxy_isn"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000000"
+            },
+            {
+              "type" : "calculation",
+              "value" : "calc_0"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0xffffffff"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 188,
+            "column" : 12,
+            "source_fragment" : "hash(meta.proxy_isn, HashAlgorithm.crc32, (bit<32>)0, {hdr.ipv4.srcAddr, ..."
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_15"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 194,
+            "column" : 32,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "proxy_isn_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_15"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata.proxy_isn"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 194,
+            "column" : 12,
+            "source_fragment" : "proxy_isn_reg.write((bit<32>)meta.reg_index, meta.proxy_isn)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_16"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 204,
+            "column" : 33,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "conn_state_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_16"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x01"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 204,
+            "column" : 12,
+            "source_fragment" : "conn_state_reg.write((bit<32>)meta.reg_index, 1)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_17"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 211,
+            "column" : 42,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "server_ip_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "server_ip_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_17"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 211,
+            "column" : 12,
+            "source_fragment" : "server_ip_reg.read(server_ip, (bit<32>)meta.reg_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_18"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 212,
+            "column" : 46,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "server_port_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "server_port_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_18"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 212,
+            "column" : 12,
+            "source_fragment" : "server_port_reg.read(server_port, (bit<32>)meta.reg_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "srcMac_0"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ethernet", "srcAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 214,
+            "column" : 12,
+            "source_fragment" : "bit<48> srcMac = hdr.ethernet.srcAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "srcAddr"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ethernet", "dstAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 215,
+            "column" : 12,
+            "source_fragment" : "hdr.ethernet.srcAddr = hdr.ethernet.dstAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "dstAddr"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "srcMac_0"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 216,
+            "column" : 12,
+            "source_fragment" : "hdr.ethernet.dstAddr = srcMac"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "dstAddr"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "srcAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 217,
+            "column" : 12,
+            "source_fragment" : "hdr.ipv4.dstAddr = hdr.ipv4.srcAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "srcAddr"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "server_ip_0"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 218,
+            "column" : 12,
+            "source_fragment" : "hdr.ipv4.srcAddr = server_ip"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "dstPort"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "srcPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 219,
+            "column" : 12,
+            "source_fragment" : "hdr.tcp.dstPort = hdr.tcp.srcPort"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "srcPort"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "server_port_0"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 220,
+            "column" : 12,
+            "source_fragment" : "hdr.tcp.srcPort = server_port"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "ackNo"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["tcp", "seqNo"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00000001"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 221,
+            "column" : 12,
+            "source_fragment" : "hdr.tcp.ackNo = hdr.tcp.seqNo + 1"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "seqNo"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata.proxy_isn"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 222,
+            "column" : 12,
+            "source_fragment" : "hdr.tcp.seqNo = meta.proxy_isn"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "ctrl"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x12"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 8,
+            "column" : 27,
+            "source_fragment" : "0x12; ..."
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata.tcpSegLen"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "-",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["ipv4", "totalLen"]
+                      },
+                      "right" : {
+                        "type" : "expression",
+                        "value" : {
+                          "op" : "&",
+                          "left" : {
+                            "type" : "expression",
+                            "value" : {
+                              "op" : "<<",
+                              "left" : {
+                                "type" : "expression",
+                                "value" : {
+                                  "op" : "&",
+                                  "left" : {
+                                    "type" : "field",
+                                    "value" : ["ipv4", "ihl"]
+                                  },
+                                  "right" : {
+                                    "type" : "hexstr",
+                                    "value" : "0xffff"
+                                  }
+                                }
+                              },
+                              "right" : {
+                                "type" : "hexstr",
+                                "value" : "0x2"
+                              }
+                            }
+                          },
+                          "right" : {
+                            "type" : "hexstr",
+                            "value" : "0xffff"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 230,
+            "column" : 12,
+            "source_fragment" : "meta.tcpSegLen = (bit<16>)(hdr.ipv4.totalLen - (bit<16>)hdr.ipv4.ihl * 4"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["standard_metadata", "egress_spec"]
+            },
+            {
+              "type" : "field",
+              "value" : ["standard_metadata", "ingress_port"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 233,
+            "column" : 12,
+            "source_fragment" : "standard_metadata.egress_spec = standard_metadata.ingress_port"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "MyIngress.none",
+      "id" : 1,
+      "runtime_data" : [],
+      "primitives" : []
+    },
+    {
+      "name" : "MyIngress.verify_client_ack",
+      "id" : 2,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_19"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "srcAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 148,
+            "column" : 63,
+            "source_fragment" : "hdr.ipv4.srcAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_20"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "dstAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 149,
+            "column" : 59,
+            "source_fragment" : "hdr.ipv4.dstAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_21"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "srcPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 150,
+            "column" : 59,
+            "source_fragment" : "hdr.tcp.srcPort"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_22"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "dstPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 151,
+            "column" : 59,
+            "source_fragment" : "hdr.tcp.dstPort"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_23"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "protocol"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 152,
+            "column" : 59,
+            "source_fragment" : "hdr.ipv4.protocol"
+          }
+        },
+        {
+          "op" : "modify_field_with_hash_based_offset",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata.reg_index"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000000"
+            },
+            {
+              "type" : "calculation",
+              "value" : "calc_1"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00010000"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 148,
+            "column" : 8,
+            "source_fragment" : "hash(meta.reg_index, HashAlgorithm.crc32, (bit<32>)0, {hdr.ipv4.srcAddr, ..."
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_24"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 261,
+            "column" : 43,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "current_state_1"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "conn_state_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_24"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 261,
+            "column" : 8,
+            "source_fragment" : "conn_state_reg.read(current_state, (bit<32>)meta.reg_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_25"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 262,
+            "column" : 45,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "stored_proxy_isn_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "proxy_isn_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_25"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 262,
+            "column" : 8,
+            "source_fragment" : "proxy_isn_reg.read(stored_proxy_isn, (bit<32>)meta.reg_index)"
+          }
+        },
+        {
+          "op" : "_jump_if_zero",
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 264,
+            "column" : 8,
+            "source_fragment" : "if"
+          },
+          "parameters" : [
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "b2d",
+                  "left" : null,
+                  "right" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "==",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "current_state_1"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x01"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x21"
+            }
+          ]
+        },
+        {
+          "op" : "_jump_if_zero",
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 267,
+            "column" : 12,
+            "source_fragment" : "if"
+          },
+          "parameters" : [
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "b2d",
+                  "left" : null,
+                  "right" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "==",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["tcp", "ackNo"]
+                      },
+                      "right" : {
+                        "type" : "expression",
+                        "value" : {
+                          "op" : "&",
+                          "left" : {
+                            "type" : "expression",
+                            "value" : {
+                              "op" : "+",
+                              "left" : {
+                                "type" : "field",
+                                "value" : ["scalars", "stored_proxy_isn_0"]
+                              },
+                              "right" : {
+                                "type" : "hexstr",
+                                "value" : "0x00000001"
+                              }
+                            }
+                          },
+                          "right" : {
+                            "type" : "hexstr",
+                            "value" : "0xffffffff"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x20"
+            }
+          ]
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_26"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 269,
+            "column" : 37,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "conn_state_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_26"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x02"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 269,
+            "column" : 16,
+            "source_fragment" : "conn_state_reg.write((bit<32>)meta.reg_index, 2)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_27"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 280,
+            "column" : 46,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "client_ip_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "client_ip_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_27"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 280,
+            "column" : 16,
+            "source_fragment" : "client_ip_reg.read(client_ip, (bit<32>)meta.reg_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_28"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 281,
+            "column" : 50,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "client_port_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "client_port_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_28"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 281,
+            "column" : 16,
+            "source_fragment" : "client_port_reg.read(client_port, (bit<32>)meta.reg_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_29"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 282,
+            "column" : 46,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "server_ip_1"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "server_ip_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_29"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 282,
+            "column" : 16,
+            "source_fragment" : "server_ip_reg.read(server_ip, (bit<32>)meta.reg_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_30"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 283,
+            "column" : 50,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "server_port_1"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "server_port_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_30"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 283,
+            "column" : 16,
+            "source_fragment" : "server_port_reg.read(server_port, (bit<32>)meta.reg_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_31"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 284,
+            "column" : 48,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "client_isn_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "client_isn_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_31"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 284,
+            "column" : 16,
+            "source_fragment" : "client_isn_reg.read(client_isn, (bit<32>)meta.reg_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "srcAddr"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "client_ip_0"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 286,
+            "column" : 16,
+            "source_fragment" : "hdr.ipv4.srcAddr = client_ip"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "dstAddr"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "server_ip_1"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 287,
+            "column" : 16,
+            "source_fragment" : "hdr.ipv4.dstAddr = server_ip"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "srcPort"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "client_port_0"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 288,
+            "column" : 16,
+            "source_fragment" : "hdr.tcp.srcPort = client_port"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "dstPort"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "server_port_1"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 289,
+            "column" : 16,
+            "source_fragment" : "hdr.tcp.dstPort = server_port"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "seqNo"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "client_isn_0"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 290,
+            "column" : 16,
+            "source_fragment" : "hdr.tcp.seqNo = client_isn"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "ackNo"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000000"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 291,
+            "column" : 16,
+            "source_fragment" : "hdr.tcp.ackNo = 0"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "ctrl"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x02"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 6,
+            "column" : 23,
+            "source_fragment" : "0x02; ..."
+          }
+        },
+        {
+          "op" : "_jump",
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 267,
+            "column" : 12,
+            "source_fragment" : "if"
+          },
+          "parameters" : [
+            {
+              "type" : "hexstr",
+              "value" : "0x21"
+            }
+          ]
+        },
+        {
+          "op" : "mark_to_drop",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "standard_metadata"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 297,
+            "column" : 16,
+            "source_fragment" : "mark_to_drop(standard_metadata)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "MyIngress.handle_server_syn_ack",
+      "id" : 3,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_32"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "dstAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 163,
+            "column" : 67,
+            "source_fragment" : "hdr.ipv4.dstAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_33"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "srcAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 164,
+            "column" : 59,
+            "source_fragment" : "hdr.ipv4.srcAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_34"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "dstPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 165,
+            "column" : 59,
+            "source_fragment" : "hdr.tcp.dstPort"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_35"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "srcPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 166,
+            "column" : 59,
+            "source_fragment" : "hdr.tcp.srcPort"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_36"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "protocol"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 167,
+            "column" : 59,
+            "source_fragment" : "hdr.ipv4.protocol"
+          }
+        },
+        {
+          "op" : "modify_field_with_hash_based_offset",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata.reg_rev_index"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000000"
+            },
+            {
+              "type" : "calculation",
+              "value" : "calc_2"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00010000"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 163,
+            "column" : 8,
+            "source_fragment" : "hash(meta.reg_rev_index, HashAlgorithm.crc32, (bit<32>)0, {hdr.ipv4.dstAddr, ..."
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_37"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_rev_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 306,
+            "column" : 42,
+            "source_fragment" : "(bit<32>) meta.reg_rev_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "current_state_2"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "conn_state_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_37"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 306,
+            "column" : 8,
+            "source_fragment" : "conn_state_reg.read(current_state,(bit<32>) meta.reg_rev_index)"
+          }
+        },
+        {
+          "op" : "_jump_if_zero",
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 308,
+            "column" : 8,
+            "source_fragment" : "if"
+          },
+          "parameters" : [
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "b2d",
+                  "left" : null,
+                  "right" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "==",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "current_state_2"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x02"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x24"
+            }
+          ]
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_38"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_rev_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 315,
+            "column" : 42,
+            "source_fragment" : "(bit<32>)meta.reg_rev_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "proxy_isn_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "proxy_isn_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_38"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 315,
+            "column" : 12,
+            "source_fragment" : "proxy_isn_reg.read(proxy_isn, (bit<32>)meta.reg_rev_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata.ack_offset"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "-",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "proxy_isn_0"]
+                      },
+                      "right" : {
+                        "type" : "field",
+                        "value" : ["tcp", "seqNo"]
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 316,
+            "column" : 12,
+            "source_fragment" : "meta.ack_offset = proxy_isn - hdr.tcp.seqNo"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_39"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_rev_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 317,
+            "column" : 33,
+            "source_fragment" : "(bit<32>)meta.reg_rev_index"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_40"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "-",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "proxy_isn_0"]
+                      },
+                      "right" : {
+                        "type" : "field",
+                        "value" : ["tcp", "seqNo"]
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 317,
+            "column" : 62,
+            "source_fragment" : "meta.ack_offset"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "ack_offset_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_39"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_40"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 317,
+            "column" : 12,
+            "source_fragment" : "ack_offset_reg.write((bit<32>)meta.reg_rev_index, meta.ack_offset)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_41"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_rev_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 326,
+            "column" : 42,
+            "source_fragment" : "(bit<32>)meta.reg_rev_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "client_ip_1"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "client_ip_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_41"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 326,
+            "column" : 12,
+            "source_fragment" : "client_ip_reg.read(client_ip, (bit<32>)meta.reg_rev_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_42"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_rev_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 327,
+            "column" : 46,
+            "source_fragment" : "(bit<32>)meta.reg_rev_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "client_port_1"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "client_port_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_42"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 327,
+            "column" : 12,
+            "source_fragment" : "client_port_reg.read(client_port, (bit<32>)meta.reg_rev_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_43"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_rev_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 328,
+            "column" : 42,
+            "source_fragment" : "(bit<32>)meta.reg_rev_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "server_ip_2"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "server_ip_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_43"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 328,
+            "column" : 12,
+            "source_fragment" : "server_ip_reg.read(server_ip, (bit<32>)meta.reg_rev_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_44"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_rev_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 329,
+            "column" : 46,
+            "source_fragment" : "(bit<32>)meta.reg_rev_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "server_port_2"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "server_port_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_44"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 329,
+            "column" : 12,
+            "source_fragment" : "server_port_reg.read(server_port, (bit<32>)meta.reg_rev_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "srcMac_1"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ethernet", "srcAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 331,
+            "column" : 12,
+            "source_fragment" : "bit<48> srcMac = hdr.ethernet.srcAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "srcAddr"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ethernet", "dstAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 332,
+            "column" : 12,
+            "source_fragment" : "hdr.ethernet.srcAddr = hdr.ethernet.dstAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "dstAddr"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "srcMac_1"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 333,
+            "column" : 12,
+            "source_fragment" : "hdr.ethernet.dstAddr = srcMac"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "srcAddr"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "client_ip_1"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 334,
+            "column" : 12,
+            "source_fragment" : "hdr.ipv4.srcAddr = client_ip"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "dstAddr"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "server_ip_2"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 335,
+            "column" : 12,
+            "source_fragment" : "hdr.ipv4.dstAddr = server_ip"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "srcPort"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "client_port_1"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 336,
+            "column" : 12,
+            "source_fragment" : "hdr.tcp.srcPort = client_port"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "dstPort"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "server_port_2"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 337,
+            "column" : 12,
+            "source_fragment" : "hdr.tcp.dstPort = server_port"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "ctrl"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x10"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 7,
+            "column" : 23,
+            "source_fragment" : "0x10; ..."
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_ack_0"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "ackNo"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 339,
+            "column" : 12,
+            "source_fragment" : "bit<32> tmp_ack = hdr.tcp.ackNo"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "ackNo"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["tcp", "seqNo"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00000001"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 340,
+            "column" : 12,
+            "source_fragment" : "hdr.tcp.ackNo = hdr.tcp.seqNo + 1"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "seqNo"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_ack_0"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 341,
+            "column" : 12,
+            "source_fragment" : "hdr.tcp.seqNo = tmp_ack"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_45"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_rev_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 346,
+            "column" : 33,
+            "source_fragment" : "(bit<32>)meta.reg_rev_index"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "conn_state_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_45"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x03"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 346,
+            "column" : 12,
+            "source_fragment" : "conn_state_reg.write((bit<32>)meta.reg_rev_index, 3)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "MyIngress.forward_packet_with_seq_offset",
+      "id" : 4,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_46"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "srcAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 148,
+            "column" : 63,
+            "source_fragment" : "hdr.ipv4.srcAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_47"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "dstAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 149,
+            "column" : 59,
+            "source_fragment" : "hdr.ipv4.dstAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_48"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "srcPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 150,
+            "column" : 59,
+            "source_fragment" : "hdr.tcp.srcPort"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_49"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "dstPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 151,
+            "column" : 59,
+            "source_fragment" : "hdr.tcp.dstPort"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_50"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "protocol"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 152,
+            "column" : 59,
+            "source_fragment" : "hdr.ipv4.protocol"
+          }
+        },
+        {
+          "op" : "modify_field_with_hash_based_offset",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata.reg_index"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000000"
+            },
+            {
+              "type" : "calculation",
+              "value" : "calc_3"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00010000"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 148,
+            "column" : 8,
+            "source_fragment" : "hash(meta.reg_index, HashAlgorithm.crc32, (bit<32>)0, {hdr.ipv4.srcAddr, ..."
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_51"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "dstAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 163,
+            "column" : 67,
+            "source_fragment" : "hdr.ipv4.dstAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_52"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "srcAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 164,
+            "column" : 59,
+            "source_fragment" : "hdr.ipv4.srcAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_53"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "dstPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 165,
+            "column" : 59,
+            "source_fragment" : "hdr.tcp.dstPort"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_54"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "srcPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 166,
+            "column" : 59,
+            "source_fragment" : "hdr.tcp.srcPort"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_55"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "protocol"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 167,
+            "column" : 59,
+            "source_fragment" : "hdr.ipv4.protocol"
+          }
+        },
+        {
+          "op" : "modify_field_with_hash_based_offset",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata.reg_rev_index"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000000"
+            },
+            {
+              "type" : "calculation",
+              "value" : "calc_4"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00010000"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 163,
+            "column" : 8,
+            "source_fragment" : "hash(meta.reg_rev_index, HashAlgorithm.crc32, (bit<32>)0, {hdr.ipv4.dstAddr, ..."
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_56"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 375,
+            "column" : 43,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "current_state_3"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "conn_state_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_56"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 375,
+            "column" : 8,
+            "source_fragment" : "conn_state_reg.read(current_state, (bit<32>)meta.reg_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_57"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_rev_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 376,
+            "column" : 39,
+            "source_fragment" : "(bit<32>)meta.reg_rev_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "rev_state_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "conn_state_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_57"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 376,
+            "column" : 8,
+            "source_fragment" : "conn_state_reg.read(rev_state, (bit<32>)meta.reg_rev_index)"
+          }
+        },
+        {
+          "op" : "_jump_if_zero",
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 378,
+            "column" : 8,
+            "source_fragment" : "if"
+          },
+          "parameters" : [
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "b2d",
+                  "left" : null,
+                  "right" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "==",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "current_state_3"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x03"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x15"
+            }
+          ]
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_58"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 379,
+            "column" : 44,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "ack_offset_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "ack_offset_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_58"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 379,
+            "column" : 12,
+            "source_fragment" : "ack_offset_reg.read(ack_offset, (bit<32>)meta.reg_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "ackNo"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "-",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["tcp", "ackNo"]
+                      },
+                      "right" : {
+                        "type" : "field",
+                        "value" : ["scalars", "ack_offset_0"]
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 380,
+            "column" : 12,
+            "source_fragment" : "hdr.tcp.ackNo = hdr.tcp.ackNo - ack_offset"
+          }
+        },
+        {
+          "op" : "_jump",
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 378,
+            "column" : 8,
+            "source_fragment" : "if"
+          },
+          "parameters" : [
+            {
+              "type" : "hexstr",
+              "value" : "0x19"
+            }
+          ]
+        },
+        {
+          "op" : "_jump_if_zero",
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 381,
+            "column" : 15,
+            "source_fragment" : "if"
+          },
+          "parameters" : [
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "b2d",
+                  "left" : null,
+                  "right" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "==",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "rev_state_0"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x03"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x19"
+            }
+          ]
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_59"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_rev_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 382,
+            "column" : 44,
+            "source_fragment" : "(bit<32>)meta.reg_rev_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "ack_offset_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "ack_offset_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_59"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 382,
+            "column" : 12,
+            "source_fragment" : "ack_offset_reg.read(ack_offset, (bit<32>)meta.reg_rev_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "seqNo"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["tcp", "seqNo"]
+                      },
+                      "right" : {
+                        "type" : "field",
+                        "value" : ["scalars", "ack_offset_0"]
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 383,
+            "column" : 12,
+            "source_fragment" : "hdr.tcp.seqNo = hdr.tcp.seqNo + ack_offset"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "MyIngress.forward_packet_with_seq_offset",
+      "id" : 5,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_60"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "srcAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 148,
+            "column" : 63,
+            "source_fragment" : "hdr.ipv4.srcAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_61"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "dstAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 149,
+            "column" : 59,
+            "source_fragment" : "hdr.ipv4.dstAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_62"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "srcPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 150,
+            "column" : 59,
+            "source_fragment" : "hdr.tcp.srcPort"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_63"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "dstPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 151,
+            "column" : 59,
+            "source_fragment" : "hdr.tcp.dstPort"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_64"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "protocol"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 152,
+            "column" : 59,
+            "source_fragment" : "hdr.ipv4.protocol"
+          }
+        },
+        {
+          "op" : "modify_field_with_hash_based_offset",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata.reg_index"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000000"
+            },
+            {
+              "type" : "calculation",
+              "value" : "calc_5"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00010000"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 148,
+            "column" : 8,
+            "source_fragment" : "hash(meta.reg_index, HashAlgorithm.crc32, (bit<32>)0, {hdr.ipv4.srcAddr, ..."
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_65"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "dstAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 163,
+            "column" : 67,
+            "source_fragment" : "hdr.ipv4.dstAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_66"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "srcAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 164,
+            "column" : 59,
+            "source_fragment" : "hdr.ipv4.srcAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_67"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "dstPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 165,
+            "column" : 59,
+            "source_fragment" : "hdr.tcp.dstPort"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_68"]
+            },
+            {
+              "type" : "field",
+              "value" : ["tcp", "srcPort"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 166,
+            "column" : 59,
+            "source_fragment" : "hdr.tcp.srcPort"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_69"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "protocol"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 167,
+            "column" : 59,
+            "source_fragment" : "hdr.ipv4.protocol"
+          }
+        },
+        {
+          "op" : "modify_field_with_hash_based_offset",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata.reg_rev_index"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000000"
+            },
+            {
+              "type" : "calculation",
+              "value" : "calc_6"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00010000"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 163,
+            "column" : 8,
+            "source_fragment" : "hash(meta.reg_rev_index, HashAlgorithm.crc32, (bit<32>)0, {hdr.ipv4.dstAddr, ..."
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_70"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 375,
+            "column" : 43,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "current_state_3"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "conn_state_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_70"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 375,
+            "column" : 8,
+            "source_fragment" : "conn_state_reg.read(current_state, (bit<32>)meta.reg_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_71"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_rev_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 376,
+            "column" : 39,
+            "source_fragment" : "(bit<32>)meta.reg_rev_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "rev_state_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "conn_state_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_71"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 376,
+            "column" : 8,
+            "source_fragment" : "conn_state_reg.read(rev_state, (bit<32>)meta.reg_rev_index)"
+          }
+        },
+        {
+          "op" : "_jump_if_zero",
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 378,
+            "column" : 8,
+            "source_fragment" : "if"
+          },
+          "parameters" : [
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "b2d",
+                  "left" : null,
+                  "right" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "==",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "current_state_3"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x03"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x15"
+            }
+          ]
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_72"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 379,
+            "column" : 44,
+            "source_fragment" : "(bit<32>)meta.reg_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "ack_offset_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "ack_offset_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_72"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 379,
+            "column" : 12,
+            "source_fragment" : "ack_offset_reg.read(ack_offset, (bit<32>)meta.reg_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "ackNo"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "-",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["tcp", "ackNo"]
+                      },
+                      "right" : {
+                        "type" : "field",
+                        "value" : ["scalars", "ack_offset_0"]
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 380,
+            "column" : 12,
+            "source_fragment" : "hdr.tcp.ackNo = hdr.tcp.ackNo - ack_offset"
+          }
+        },
+        {
+          "op" : "_jump",
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 378,
+            "column" : 8,
+            "source_fragment" : "if"
+          },
+          "parameters" : [
+            {
+              "type" : "hexstr",
+              "value" : "0x19"
+            }
+          ]
+        },
+        {
+          "op" : "_jump_if_zero",
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 381,
+            "column" : 15,
+            "source_fragment" : "if"
+          },
+          "parameters" : [
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "b2d",
+                  "left" : null,
+                  "right" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "==",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "rev_state_0"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x03"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x19"
+            }
+          ]
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_73"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata.reg_rev_index"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 382,
+            "column" : 44,
+            "source_fragment" : "(bit<32>)meta.reg_rev_index"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "ack_offset_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "ack_offset_reg"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_73"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 382,
+            "column" : 12,
+            "source_fragment" : "ack_offset_reg.read(ack_offset, (bit<32>)meta.reg_rev_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["tcp", "seqNo"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["tcp", "seqNo"]
+                      },
+                      "right" : {
+                        "type" : "field",
+                        "value" : ["scalars", "ack_offset_0"]
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 383,
+            "column" : 12,
+            "source_fragment" : "hdr.tcp.seqNo = hdr.tcp.seqNo + ack_offset"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "MyIngress.send_arp_reply",
+      "id" : 6,
+      "runtime_data" : [
+        {
+          "name" : "target_mac",
+          "bitwidth" : 48
+        }
+      ],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "dstAddr"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ethernet", "srcAddr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 389,
+            "column" : 8,
+            "source_fragment" : "hdr.ethernet.dstAddr = hdr.ethernet.srcAddr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "srcAddr"]
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 0
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 390,
+            "column" : 8,
+            "source_fragment" : "hdr.ethernet.srcAddr = target_mac"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["arp", "opcode"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x0002"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 393,
+            "column" : 8,
+            "source_fragment" : "hdr.arp.opcode = 0x0002"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["arp", "target_hw_addr"]
+            },
+            {
+              "type" : "field",
+              "value" : ["arp", "sender_hw_addr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 394,
+            "column" : 8,
+            "source_fragment" : "hdr.arp.target_hw_addr = hdr.arp.sender_hw_addr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "target_ip_0"]
+            },
+            {
+              "type" : "field",
+              "value" : ["arp", "target_proto_addr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 396,
+            "column" : 8,
+            "source_fragment" : "target_ip = hdr.arp.target_proto_addr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["arp", "target_proto_addr"]
+            },
+            {
+              "type" : "field",
+              "value" : ["arp", "sender_proto_addr"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 397,
+            "column" : 8,
+            "source_fragment" : "hdr.arp.target_proto_addr = hdr.arp.sender_proto_addr"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["arp", "sender_hw_addr"]
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 0
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 398,
+            "column" : 8,
+            "source_fragment" : "hdr.arp.sender_hw_addr = target_mac"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["arp", "sender_proto_addr"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "target_ip_0"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 399,
+            "column" : 8,
+            "source_fragment" : "hdr.arp.sender_proto_addr = target_ip"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "MyIngress.drop",
+      "id" : 7,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "mark_to_drop",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "standard_metadata"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 403,
+            "column" : 8,
+            "source_fragment" : "mark_to_drop(standard_metadata)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "MyIngress.drop",
+      "id" : 8,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "mark_to_drop",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "standard_metadata"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 403,
+            "column" : 8,
+            "source_fragment" : "mark_to_drop(standard_metadata)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "MyIngress.set_port_forward",
+      "id" : 9,
+      "runtime_data" : [
+        {
+          "name" : "port",
+          "bitwidth" : 9
+        }
+      ],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["standard_metadata", "egress_spec"]
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 0
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 418,
+            "column" : 8,
+            "source_fragment" : "standard_metadata.egress_spec = port"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "eagle_syn_proxy435",
+      "id" : 10,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["standard_metadata", "egress_spec"]
+            },
+            {
+              "type" : "field",
+              "value" : ["standard_metadata", "ingress_port"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 435,
+            "column" : 12,
+            "source_fragment" : "standard_metadata.egress_spec = standard_metadata.ingress_port"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "eagle_syn_proxy441",
+      "id" : 11,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata.direction"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 441,
+            "column" : 16,
+            "source_fragment" : "meta.direction = 0"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "eagle_syn_proxy443",
+      "id" : 12,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata.direction"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x01"
+            }
+          ],
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 443,
+            "column" : 16,
+            "source_fragment" : "meta.direction = 1"
+          }
+        }
+      ]
+    }
+  ],
+  "pipelines" : [
+    {
+      "name" : "ingress",
+      "id" : 0,
+      "source_info" : {
+        "filename" : "eagle_syn_proxy.p4",
+        "line" : 142,
+        "column" : 8,
+        "source_fragment" : "MyIngress"
+      },
+      "init_table" : "node_2",
+      "tables" : [
+        {
+          "name" : "MyIngress.arp_table",
+          "id" : 0,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 406,
+            "column" : 10,
+            "source_fragment" : "arp_table"
+          },
+          "key" : [
+            {
+              "match_type" : "exact",
+              "name" : "hdr.arp.target_proto_addr",
+              "target" : ["arp", "target_proto_addr"],
+              "mask" : null
+            }
+          ],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [6, 7],
+          "actions" : ["MyIngress.send_arp_reply", "MyIngress.drop"],
+          "base_default_next" : "tbl_eagle_syn_proxy435",
+          "next_tables" : {
+            "MyIngress.send_arp_reply" : "tbl_eagle_syn_proxy435",
+            "MyIngress.drop" : "tbl_eagle_syn_proxy435"
+          },
+          "default_entry" : {
+            "action_id" : 7,
+            "action_const" : false,
+            "action_data" : [],
+            "action_entry_const" : false
+          }
+        },
+        {
+          "name" : "tbl_eagle_syn_proxy435",
+          "id" : 1,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 435,
+            "column" : 42,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [10],
+          "actions" : ["eagle_syn_proxy435"],
+          "base_default_next" : null,
+          "next_tables" : {
+            "eagle_syn_proxy435" : null
+          },
+          "default_entry" : {
+            "action_id" : 10,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_eagle_syn_proxy441",
+          "id" : 2,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 441,
+            "column" : 31,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [11],
+          "actions" : ["eagle_syn_proxy441"],
+          "base_default_next" : "node_10",
+          "next_tables" : {
+            "eagle_syn_proxy441" : "node_10"
+          },
+          "default_entry" : {
+            "action_id" : 11,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_eagle_syn_proxy443",
+          "id" : 3,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 443,
+            "column" : 31,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [12],
+          "actions" : ["eagle_syn_proxy443"],
+          "base_default_next" : "node_10",
+          "next_tables" : {
+            "eagle_syn_proxy443" : "node_10"
+          },
+          "default_entry" : {
+            "action_id" : 12,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_handle_client_syn",
+          "id" : 4,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 448,
+            "column" : 16,
+            "source_fragment" : "handle_client_syn()"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [0],
+          "actions" : ["MyIngress.handle_client_syn"],
+          "base_default_next" : null,
+          "next_tables" : {
+            "MyIngress.handle_client_syn" : null
+          },
+          "default_entry" : {
+            "action_id" : 0,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_verify_client_ack",
+          "id" : 5,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 453,
+            "column" : 16,
+            "source_fragment" : "verify_client_ack()"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [2],
+          "actions" : ["MyIngress.verify_client_ack"],
+          "base_default_next" : "MyIngress.debugger",
+          "next_tables" : {
+            "MyIngress.verify_client_ack" : "MyIngress.debugger"
+          },
+          "default_entry" : {
+            "action_id" : 2,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "MyIngress.debugger",
+          "id" : 6,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 239,
+            "column" : 10,
+            "source_fragment" : "debugger"
+          },
+          "key" : [
+            {
+              "match_type" : "exact",
+              "name" : "meta.reg_index",
+              "target" : ["scalars", "metadata.reg_index"],
+              "mask" : null
+            },
+            {
+              "match_type" : "exact",
+              "name" : "hdr.tcp.dstPort",
+              "target" : ["tcp", "dstPort"],
+              "mask" : null
+            },
+            {
+              "match_type" : "exact",
+              "name" : "hdr.ipv4.dstAddr",
+              "target" : ["ipv4", "dstAddr"],
+              "mask" : null
+            },
+            {
+              "match_type" : "exact",
+              "name" : "hdr.tcp.seqNo",
+              "target" : ["tcp", "seqNo"],
+              "mask" : null
+            },
+            {
+              "match_type" : "exact",
+              "name" : "hdr.tcp.srcPort",
+              "target" : ["tcp", "srcPort"],
+              "mask" : null
+            },
+            {
+              "match_type" : "exact",
+              "name" : "hdr.ipv4.srcAddr",
+              "target" : ["ipv4", "srcAddr"],
+              "mask" : null
+            },
+            {
+              "match_type" : "exact",
+              "name" : "hdr.tcp.ctrl",
+              "target" : ["tcp", "ctrl"],
+              "mask" : null
+            }
+          ],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [1],
+          "actions" : ["MyIngress.none"],
+          "base_default_next" : "tbl_forward_packet_with_seq_offset",
+          "next_tables" : {
+            "MyIngress.none" : "tbl_forward_packet_with_seq_offset"
+          },
+          "default_entry" : {
+            "action_id" : 1,
+            "action_const" : false,
+            "action_data" : [],
+            "action_entry_const" : false
+          }
+        },
+        {
+          "name" : "tbl_forward_packet_with_seq_offset",
+          "id" : 7,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 455,
+            "column" : 16,
+            "source_fragment" : "forward_packet_with_seq_offset()"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [4],
+          "actions" : ["MyIngress.forward_packet_with_seq_offset"],
+          "base_default_next" : "MyIngress.mac_port_table",
+          "next_tables" : {
+            "MyIngress.forward_packet_with_seq_offset" : "MyIngress.mac_port_table"
+          },
+          "default_entry" : {
+            "action_id" : 4,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "MyIngress.mac_port_table",
+          "id" : 8,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 421,
+            "column" : 10,
+            "source_fragment" : "mac_port_table"
+          },
+          "key" : [
+            {
+              "match_type" : "exact",
+              "name" : "hdr.ethernet.dstAddr",
+              "target" : ["ethernet", "dstAddr"],
+              "mask" : null
+            }
+          ],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [9, 8],
+          "actions" : ["MyIngress.set_port_forward", "MyIngress.drop"],
+          "base_default_next" : null,
+          "next_tables" : {
+            "MyIngress.set_port_forward" : null,
+            "MyIngress.drop" : null
+          },
+          "default_entry" : {
+            "action_id" : 8,
+            "action_const" : false,
+            "action_data" : [],
+            "action_entry_const" : false
+          }
+        },
+        {
+          "name" : "tbl_forward_packet_with_seq_offset_0",
+          "id" : 9,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 459,
+            "column" : 16,
+            "source_fragment" : "forward_packet_with_seq_offset()"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [5],
+          "actions" : ["MyIngress.forward_packet_with_seq_offset"],
+          "base_default_next" : "MyIngress.mac_port_table",
+          "next_tables" : {
+            "MyIngress.forward_packet_with_seq_offset" : "MyIngress.mac_port_table"
+          },
+          "default_entry" : {
+            "action_id" : 5,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_handle_server_syn_ack",
+          "id" : 10,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 464,
+            "column" : 16,
+            "source_fragment" : "handle_server_syn_ack()"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [3],
+          "actions" : ["MyIngress.handle_server_syn_ack"],
+          "base_default_next" : "MyIngress.mac_port_table",
+          "next_tables" : {
+            "MyIngress.handle_server_syn_ack" : "MyIngress.mac_port_table"
+          },
+          "default_entry" : {
+            "action_id" : 3,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        }
+      ],
+      "action_profiles" : [],
+      "conditionals" : [
+        {
+          "name" : "node_2",
+          "id" : 0,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 433,
+            "column" : 12,
+            "source_fragment" : "hdr.arp.isValid() && hdr.arp.opcode == 0x0001"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "and",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "d2b",
+                  "left" : null,
+                  "right" : {
+                    "type" : "field",
+                    "value" : ["arp", "$valid$"]
+                  }
+                }
+              },
+              "right" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "==",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["arp", "opcode"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x0001"
+                  }
+                }
+              }
+            }
+          },
+          "true_next" : "MyIngress.arp_table",
+          "false_next" : "node_5"
+        },
+        {
+          "name" : "node_5",
+          "id" : 1,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 438,
+            "column" : 17,
+            "source_fragment" : "hdr.ipv4.isValid() && hdr.tcp.isValid()"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "and",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "d2b",
+                  "left" : null,
+                  "right" : {
+                    "type" : "field",
+                    "value" : ["ipv4", "$valid$"]
+                  }
+                }
+              },
+              "right" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "d2b",
+                  "left" : null,
+                  "right" : {
+                    "type" : "field",
+                    "value" : ["tcp", "$valid$"]
+                  }
+                }
+              }
+            }
+          },
+          "false_next" : null,
+          "true_next" : "node_6"
+        },
+        {
+          "name" : "node_6",
+          "id" : 2,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 440,
+            "column" : 16,
+            "source_fragment" : "standard_metadata.ingress_port == 1"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "==",
+              "left" : {
+                "type" : "field",
+                "value" : ["standard_metadata", "ingress_port"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x0001"
+              }
+            }
+          },
+          "true_next" : "tbl_eagle_syn_proxy441",
+          "false_next" : "node_8"
+        },
+        {
+          "name" : "node_8",
+          "id" : 3,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 442,
+            "column" : 23,
+            "source_fragment" : "standard_metadata.ingress_port == 2"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "==",
+              "left" : {
+                "type" : "field",
+                "value" : ["standard_metadata", "ingress_port"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x0002"
+              }
+            }
+          },
+          "true_next" : "tbl_eagle_syn_proxy443",
+          "false_next" : "node_10"
+        },
+        {
+          "name" : "node_10",
+          "id" : 4,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 447,
+            "column" : 16,
+            "source_fragment" : "hdr.tcp.ctrl == TCP_SYN"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "==",
+              "left" : {
+                "type" : "field",
+                "value" : ["tcp", "ctrl"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x02"
+              }
+            }
+          },
+          "true_next" : "tbl_handle_client_syn",
+          "false_next" : "node_12"
+        },
+        {
+          "name" : "node_12",
+          "id" : 5,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 451,
+            "column" : 21,
+            "source_fragment" : "hdr.tcp.ctrl == TCP_ACK"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "==",
+              "left" : {
+                "type" : "field",
+                "value" : ["tcp", "ctrl"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x10"
+              }
+            }
+          },
+          "true_next" : "tbl_verify_client_ack",
+          "false_next" : "node_17"
+        },
+        {
+          "name" : "node_17",
+          "id" : 6,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 458,
+            "column" : 21,
+            "source_fragment" : "hdr.tcp.ctrl == TCP_PSH_ACK"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "==",
+              "left" : {
+                "type" : "field",
+                "value" : ["tcp", "ctrl"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x18"
+              }
+            }
+          },
+          "true_next" : "tbl_forward_packet_with_seq_offset_0",
+          "false_next" : "node_20"
+        },
+        {
+          "name" : "node_20",
+          "id" : 7,
+          "source_info" : {
+            "filename" : "eagle_syn_proxy.p4",
+            "line" : 463,
+            "column" : 21,
+            "source_fragment" : "hdr.tcp.ctrl == TCP_SYN_ACK"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "==",
+              "left" : {
+                "type" : "field",
+                "value" : ["tcp", "ctrl"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x12"
+              }
+            }
+          },
+          "false_next" : null,
+          "true_next" : "tbl_handle_server_syn_ack"
+        }
+      ]
+    },
+    {
+      "name" : "egress",
+      "id" : 1,
+      "source_info" : {
+        "filename" : "eagle_syn_proxy.p4",
+        "line" : 475,
+        "column" : 8,
+        "source_fragment" : "MyEgress"
+      },
+      "init_table" : null,
+      "tables" : [],
+      "action_profiles" : [],
+      "conditionals" : []
+    }
+  ],
+  "checksums" : [
+    {
+      "name" : "cksum",
+      "id" : 0,
+      "source_info" : {
+        "filename" : "eagle_syn_proxy.p4",
+        "line" : 483,
+        "column" : 8,
+        "source_fragment" : "update_checksum( ..."
+      },
+      "target" : ["ipv4", "hdrChecksum"],
+      "type" : "generic",
+      "calculation" : "calc_7",
+      "verify" : false,
+      "update" : true,
+      "if_cond" : {
+        "type" : "expression",
+        "value" : {
+          "op" : "d2b",
+          "left" : null,
+          "right" : {
+            "type" : "field",
+            "value" : ["ipv4", "$valid$"]
+          }
+        }
+      }
+    }
+  ],
+  "force_arith" : [],
+  "extern_instances" : [],
+  "field_aliases" : [
+    [
+      "queueing_metadata.enq_timestamp",
+      ["standard_metadata", "enq_timestamp"]
+    ],
+    [
+      "queueing_metadata.enq_qdepth",
+      ["standard_metadata", "enq_qdepth"]
+    ],
+    [
+      "queueing_metadata.deq_timedelta",
+      ["standard_metadata", "deq_timedelta"]
+    ],
+    [
+      "queueing_metadata.deq_qdepth",
+      ["standard_metadata", "deq_qdepth"]
+    ],
+    [
+      "intrinsic_metadata.ingress_global_timestamp",
+      ["standard_metadata", "ingress_global_timestamp"]
+    ],
+    [
+      "intrinsic_metadata.egress_global_timestamp",
+      ["standard_metadata", "egress_global_timestamp"]
+    ],
+    [
+      "intrinsic_metadata.mcast_grp",
+      ["standard_metadata", "mcast_grp"]
+    ],
+    [
+      "intrinsic_metadata.egress_rid",
+      ["standard_metadata", "egress_rid"]
+    ],
+    [
+      "intrinsic_metadata.priority",
+      ["standard_metadata", "priority"]
+    ]
+  ],
+  "program" : "eagle_syn_proxy.p4",
+  "__meta__" : {
+    "version" : [2, 23],
+    "compiler" : "https://github.com/p4lang/p4c"
+  }
+}
