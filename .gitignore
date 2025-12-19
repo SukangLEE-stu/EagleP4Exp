@@ -21,3 +21,8 @@ tests/**/coverage/
 *.njsproj
 *.sln
 .editorconfig
+
+__pycache__
+exp1/common/model_test/test_environment/build
+exp1/common/model_test/test_environment/logs
+exp1/common/model_test/test_environment/pcaps
